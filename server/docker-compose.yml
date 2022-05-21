@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  app:
+    container_name: fastapi_reactjs_todolist
+    image: fastapi_reactjs_todolist
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - 2222:2222
+    volumes:
+      - .:/usr/src/
