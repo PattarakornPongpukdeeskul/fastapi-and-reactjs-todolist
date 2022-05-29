@@ -1,3 +1,7 @@
 uvicorn
 fastapi
 apiclient
+pymongo[srv]
+python-dotenv
+python-multipart
+pyjwt

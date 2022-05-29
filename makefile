@@ -1,7 +1,6 @@
-# local developemnt
 build:
-	cd server && docker-compose build
+	docker-compose build
 start:
-	cd server && docker-compose up -d
+	docker-compose up -d
 stop:
-	cd server && docker-compose down
+	docker-compose down
