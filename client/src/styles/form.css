@@ -15,3 +15,12 @@ input[type="text"], input[type="password"] {
 .form-register .choose-role {
   flex-direction: row;
 }
+@media screen and (max-width: 500px) {
+  .form-tab {
+    width: 100%;
+  }
+  input[type="text"], input[type="password"] {
+    width: 250px;
+    height: 24px;
+  }  
+}
