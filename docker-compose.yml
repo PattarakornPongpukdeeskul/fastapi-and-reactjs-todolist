@@ -1,0 +1,25 @@
+version: "3.5"
+services:
+  server:
+    container_name: server_fastapi_reactjs_todolist
+    image: server_fastapi_reactjs_todolist
+    build:
+      context: .
+      dockerfile: ./docker/server.Dockerfile
+    restart: always
+    ports:
+      - 2222:2222
+    volumes:
+      - .:/usr/src/
+  client:
+    container_name: client_fastapi_reactjs_todolist
+    image: client_fastapi_reactjs_todolist
+    build:
+      context: .
+      dockerfile: ./docker/client.Dockerfile
+    restart: always
+    ports:
+      - 3000:3000
+    tty: true
+    volumes:
+      - ./:/app
